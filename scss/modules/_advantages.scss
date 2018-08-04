@@ -1,0 +1,63 @@
+.advantages {
+	background: #333333 url(../images/city.jpg) top no-repeat;
+	background-size: cover;
+	padding: 120px 0 135px;
+
+	&__title {
+		font: 400 36px $aleo;
+		margin-bottom: 50px;
+
+		&--margin {
+			margin-top: 80px;
+		}
+	}
+
+	&__text {
+		margin-bottom: 30px;
+		line-height: 26px;
+		letter-spacing: 1px;
+
+		&--margin {
+			margin-bottom: 45px;
+		}
+	}
+
+	&__button {
+		@include size(225px, 60px);
+		text-transform: uppercase;
+		padding: 20px 0;
+		font: 400 16px $aleo;
+		text-align: center;
+		background: #496bfe;
+		background: -webkit-linear-gradient(45deg, #496bfe 43%,#5474fd 43%);
+		background: -o-linear-gradient(45deg, #496bfe 43%,#5474fd 43%);
+		background: linear-gradient(45deg, #496bfe 43%,#5474fd 43%);
+		cursor: pointer;
+
+		&:hover {
+			background: -webkit-linear-gradient(45deg, #13d604 43%,#496bfe 43%);
+			background: -o-linear-gradient(45deg, #13d604 43%,#496bfe 43%);
+			background: linear-gradient(45deg, #13d604 43%,#496bfe 43%);
+		}
+	}
+
+	&__images {
+		margin-left: 65px;
+	}
+
+	&__image {
+		display: block;
+
+		&--margin--left {
+			margin-left: 125px;
+		}
+
+		&--margin--right {
+			margin-right: 125px;
+		}
+
+		&--margin--bottom {
+			margin-bottom: 5px;
+		}
+	}
+}

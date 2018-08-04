@@ -1,0 +1,373 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: Aleo;
+  font-weight: normal;
+  font-style: normal;
+  src: url("fonts/aleo/aleo-regular-webfont.eot");
+  src: url("fonts/aleo/aleo-regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/aleo/aleo-regular-webfont.woff2") format("woff2"), url("fonts/aleo/aleo-regular-webfont.woff") format("woff"), url("fonts/aleo/aleo-regular-webfont.ttf") format("truetype"), url("fonts/aleo/aleo-regular-webfont.svg#Aleo") format("svg");
+}
+@font-face {
+  font-family: Aleo;
+  font-weight: normal;
+  font-style: normal;
+  src: url("fonts/aleo/aleo-bold-webfont.eot");
+  src: url("fonts/aleo/aleo-bold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/aleo/aleo-bold-webfont.woff2") format("woff2"), url("fonts/aleo/aleo-bold-webfont.woff") format("woff"), url("fonts/aleo/aleo-bold-webfont.ttf") format("truetype"), url("fonts/aleo/aleo-bold-webfont.svg#Aleo") format("svg");
+}
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: none;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+html {
+  height: 100%;
+}
+
+body, html {
+  min-height: 100%;
+  width: 100%;
+}
+
+body {
+  padding: 15px;
+  font: 400 16px "Josefin Sans", sans-serif;
+  color: #fff;
+}
+
+.clear::after, .clear::before {
+  content: " ";
+  display: table;
+}
+
+.clear::after {
+  clear: both;
+}
+
+@font-face {
+  font-family: "icomoon";
+  src: url("fonts/icomoon/icomoon.eot?szyguo");
+  src: url("fonts/icomoon/icomoon.eot?szyguo#iefix") format("embedded-opentype"), url("fonts/icomoon/icomoon.ttf?szyguo") format("truetype"), url("fonts/icomoon/icomoon.woff?szyguo") format("woff"), url("fonts/icomoon/icomoon.svg?szyguo#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+[class^=icon-], .header__scroll::after, [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-check:before {
+  content: "";
+}
+
+.icon-down:before {
+  content: "";
+}
+
+.icon-facebook:before {
+  content: "";
+}
+
+.icon-like:before {
+  content: "";
+}
+
+.icon-linkedin:before {
+  content: "";
+}
+
+.icon-pinterest:before {
+  content: "";
+}
+
+.icon-quote:before {
+  content: "";
+}
+
+.icon-search:before {
+  content: "";
+}
+
+.icon-twitter:before {
+  content: "";
+}
+
+.icon-youtube:before {
+  content: "";
+}
+
+.header {
+  width: 100%;
+  background: #cecfd0 url(../images/header_bg.jpg) top no-repeat;
+  background-size: cover;
+  text-align: center;
+  padding: 260px 0 135px;
+  height: 100vh;
+  position: relative;
+}
+.header__title {
+  font-size: 48px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+.header__subtitle {
+  font-size: 22px;
+  letter-spacing: 3px;
+  margin-bottom: 47px;
+}
+.header__wrapper {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 650px;
+  height: 60px;
+  background: #fff;
+}
+.header__field {
+  text-align: center;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  font-size: 14px;
+  color: #999;
+  letter-spacing: 2px;
+  font-family: "Josefin Sans", sans-serif;
+}
+.header__field::-webkit-input-placeholder {
+  color: #999;
+}
+.header__field:-ms-input-placeholder {
+  color: #999;
+}
+.header__field::-ms-input-placeholder {
+  color: #999;
+}
+.header__field::placeholder {
+  color: #999;
+}
+.header__search {
+  width: 150px;
+  background: #5474fd;
+  line-height: 60px;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+  font: 400 14px Aleo, serif;
+  border: 2px solid #fff;
+  position: relative;
+  letter-spacing: 1px;
+}
+.header__search:hover {
+  background: #13d604;
+}
+.header__icon {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-size: 25px;
+}
+.header__scroll {
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  bottom: 250px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  font-size: 14px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  line-height: 50px;
+  -webkit-transition: bottom 0.3s linear;
+  -o-transition: bottom 0.3s linear;
+  transition: bottom 0.3s linear;
+}
+.header__scroll:hover {
+  bottom: 230px;
+}
+.header__scroll::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  font-size: 25px;
+}
+
+.navigation {
+  background: #5474fd;
+  padding: 32px 0;
+}
+.navigation__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.navigation__title {
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.navigation__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.navigation__item {
+  margin-right: 40px;
+}
+.navigation__item--margin {
+  margin-right: 0;
+}
+.navigation__item:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.navigation__link {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: Aleo, serif;
+  font-size: 14px;
+}
+
+.advantages {
+  background: #333333 url(../images/city.jpg) top no-repeat;
+  background-size: cover;
+  padding: 120px 0 135px;
+}
+.advantages__title {
+  font: 400 36px Aleo, serif;
+  margin-bottom: 50px;
+}
+.advantages__title--margin {
+  margin-top: 80px;
+}
+.advantages__text {
+  margin-bottom: 30px;
+  line-height: 26px;
+  letter-spacing: 1px;
+}
+.advantages__text--margin {
+  margin-bottom: 45px;
+}
+.advantages__button {
+  width: 225px;
+  height: 60px;
+  text-transform: uppercase;
+  padding: 20px 0;
+  font: 400 16px Aleo, serif;
+  text-align: center;
+  background: #496bfe;
+  background: -webkit-linear-gradient(45deg, #496bfe 43%, #5474fd 43%);
+  background: -o-linear-gradient(45deg, #496bfe 43%, #5474fd 43%);
+  background: linear-gradient(45deg, #496bfe 43%, #5474fd 43%);
+  cursor: pointer;
+}
+.advantages__button:hover {
+  background: -webkit-linear-gradient(45deg, #13d604 43%, #496bfe 43%);
+  background: -o-linear-gradient(45deg, #13d604 43%, #496bfe 43%);
+  background: linear-gradient(45deg, #13d604 43%, #496bfe 43%);
+}
+.advantages__images {
+  margin-left: 65px;
+}
+.advantages__image {
+  display: block;
+}
+.advantages__image--margin--left {
+  margin-left: 125px;
+}
+.advantages__image--margin--right {
+  margin-right: 125px;
+}
+.advantages__image--margin--bottom {
+  margin-bottom: 5px;
+}
+
+/*# sourceMappingURL=styles.min.css.map */

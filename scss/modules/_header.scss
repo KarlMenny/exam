@@ -1,0 +1,115 @@
+.header {
+	width: 100%;
+	background: #cecfd0 url(../images/header_bg.jpg) top no-repeat;
+	background-size: cover;
+	text-align: center;
+	padding: 260px 0 135px;
+	height: 100vh;
+	position: relative;
+
+	&__title {
+		font-size: 48px;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		margin-bottom: 12px;
+	}
+
+	&__subtitle {
+		font-size: 22px;
+		letter-spacing: 3px;
+		margin-bottom: 47px;
+	}
+
+	&__wrapper {
+		display: -webkit-inline-box;
+		display: -ms-inline-flexbox;
+		display: inline-flex;
+		width: 650px;
+		height: 60px;
+		background: #fff;
+	}
+
+	&__field {
+		text-align: center;
+		-webkit-box-flex: 1;
+		    -ms-flex-positive: 1;
+		        flex-grow: 1;
+		font-size: 14px;
+		color: #999;
+		letter-spacing: 2px;
+		font-family: $josefin;
+
+		&::-webkit-input-placeholder {
+			color: #999;
+		}
+
+		&:-ms-input-placeholder {
+			color: #999;
+		}
+
+		&::-ms-input-placeholder {
+			color: #999;
+		}
+
+		&::placeholder {
+			color: #999;
+		}
+	}
+
+	&__search {
+		width: 150px;
+		background: #5474fd;
+		line-height: 60px;
+		text-transform: uppercase;
+		color: #fff;
+		cursor: pointer;
+		font: 400 14px $aleo;
+		border: 2px solid #fff;
+		position: relative;
+		letter-spacing: 1px;
+
+		&:hover {
+			background: #13d604;
+		}
+	}
+
+	&__icon {
+		position: absolute;
+		right: 15px;
+		top: 15px;
+		font-size: 25px;
+	}
+
+	&__scroll {
+		width: 100px;
+		height: 50px;
+		@include pos($b: 250px, $l: 50%);
+		-webkit-transform: translateX(-50%);
+		    -ms-transform: translateX(-50%);
+		        transform: translateX(-50%);
+		font-size: 14px;
+		letter-spacing: 2px;
+		cursor: pointer;
+		line-height: 50px;
+		-webkit-transition: bottom .3s linear;
+		-o-transition: bottom .3s linear;
+		transition: bottom .3s linear;
+		
+		&:hover {
+			bottom: 230px;
+		}
+
+		&::after {
+			@extend [class^="icon-"];
+			content: "\e901";
+			position: absolute;
+			bottom: -10px;
+			left: 50%;
+			-webkit-transform: translateX(-50%);
+			    -ms-transform: translateX(-50%);
+			        transform: translateX(-50%);
+			font-size: 25px;
+		}
+	}
+}
